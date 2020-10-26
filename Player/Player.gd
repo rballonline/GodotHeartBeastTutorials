@@ -41,9 +41,12 @@ func move_state(delta):
 		animation_tree.set("parameters/Idle/blend_position", input_vector)
 		animation_tree.set("parameters/Run/blend_position", input_vector)
 		animation_tree.set("parameters/Attack/blend_position", input_vector)
+		animation_tree.set("parameters/Roll/blend_position", input_vector)
 		animation_state.travel("Run")
 		velocity = velocity.move_toward(input_vector * player_speed, acceleration * delta)
 		
+		if Input.is_action_just_pressed("roll"):
+			state = ROLL
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 		animation_state.travel("Idle")
@@ -53,17 +56,15 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 		
-	if Input.is_action_just_pressed("roll"):
-		state = ROLL
 		
 
-func attack_state(delta):
+func attack_state(_delta):
 	animation_state.travel("Attack")
 
 func attack_complete():
 	state = MOVE
 	
-func roll_state(delta):
+func roll_state(_delta):
 	velocity = roll_vector * roll_speed
 	animation_state.travel("Roll")
 	move()
