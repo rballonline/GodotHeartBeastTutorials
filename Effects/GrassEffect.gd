@@ -1,12 +1,16 @@
-extends Node2D
+extends AnimatedSprite
 
-onready var animated_sprite = $AnimatedSprite
 
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	animated_sprite.playing = true
-	animated_sprite.frame = 0
-	animated_sprite.play()
+	pass # Replace with function body.
 
 
-func _on_AnimatedSprite_animation_finished():
-	queue_free()
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass

@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var knockback = Vector2.ZERO
+const death_effect = preload("res://Effects/BatDeathEffect.tscn")
 
 onready var stats = $Stats
 

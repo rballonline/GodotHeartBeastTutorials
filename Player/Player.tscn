@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
@@ -581,6 +581,10 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
 [sub_resource type="AnimationNodeStateMachine" id=42]
 states/Attack/node = SubResource( 22 )
 states/Attack/position = Vector2( 389, 205.4 )
@@ -590,9 +594,9 @@ states/Roll/node = SubResource( 32 )
 states/Roll/position = Vector2( 424.8, -32.4 )
 states/Run/node = SubResource( 37 )
 states/Run/position = Vector2( 645, 96.536 )
-transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ) ]
+transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 45 ), "Roll", "Idle", SubResource( 46 ) ]
 start_node = "Idle"
-graph_offset = Vector2( 27, -157 )
+graph_offset = Vector2( 34, -140 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=43]
 
@@ -610,7 +614,7 @@ __meta__ = {
 position = Vector2( 0.394066, -9.45047 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 49
+frame = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0599785, -0.0960274 )
@@ -639,10 +643,10 @@ anims/RunUp = SubResource( 17 )
 tree_root = SubResource( 42 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 43 )
-parameters/Attack/blend_position = Vector2( 0.895902, 0.0828602 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Roll/blend_position = Vector2( -0.571638, -0.140263 )
-parameters/Run/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
