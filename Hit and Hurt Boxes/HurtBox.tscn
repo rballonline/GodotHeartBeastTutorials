@@ -3,3 +3,4 @@
 [node name="HurtBox" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[connection signal="area_entered" from="." to="." method="_on_HurtBox_area_entered"]
