@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.LEFT
+var stats = PlayerStats
 
 const player_speed = 90
 const acceleration = 450
@@ -12,6 +13,7 @@ onready var animation = $AnimationPlayer
 onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get("parameters/playback")
 onready var sword_hitbox = $HitboxPivot/SwordHitBox
+onready var hurtbox = $HurtBox
 
 var state = MOVE
 
@@ -20,6 +22,7 @@ enum {
 }
 
 func _ready():
+	stats.connect("no_health", self, "queue_free")
 	animation_tree.active = true
 	sword_hitbox.knockback_vector = roll_vector
 
@@ -79,4 +82,6 @@ func roll_complete():
 func move():
 	velocity = move_and_slide(velocity)
 
-
+func _on_HurtBox_area_entered(area):
+	stats.health -= 1
+	hurtbox.start_invicibility(0.5)

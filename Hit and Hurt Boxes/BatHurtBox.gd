@@ -1,6 +1,7 @@
-extends Area2D
+extends "res://Hit and Hurt Boxes/HurtBox.gd"
 
 const HitEffect = preload("res://Effects/HitEffect.tscn")
+
 
 func _on_HurtBox_area_entered(area):
 	var effect = HitEffect.instance()
