@@ -601,8 +601,13 @@ graph_offset = Vector2( 27, -157 )
 height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=45]
+<<<<<<< HEAD
+radius = 4.8718
+height = 5.33466
+=======
 radius = 5.18515
 height = 2.46943
+>>>>>>> dfd0bd974b7de866b3859d6c6cb891cdb82fdc9c
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -671,9 +676,14 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
+<<<<<<< HEAD
+position = Vector2( -0.18729, -4.86951 )
+shape = SubResource( 45 )
+=======
 position = Vector2( -0.497204, -4.80305 )
 shape = SubResource( 45 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+>>>>>>> dfd0bd974b7de866b3859d6c6cb891cdb82fdc9c
 
 [editable path="HitboxPivot/SwordHitBox"]
 

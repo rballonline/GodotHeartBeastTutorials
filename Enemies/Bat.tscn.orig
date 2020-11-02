@@ -53,7 +53,11 @@ height = 3.27476
 radius = 54.8025
 
 [sub_resource type="CircleShape2D" id=10]
+<<<<<<< HEAD
+radius = 4.34877
+=======
 radius = 3.18861
+>>>>>>> dfd0bd974b7de866b3859d6c6cb891cdb82fdc9c
 
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 16
@@ -63,7 +67,7 @@ script = ExtResource( 3 )
 position = Vector2( 0, -12 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 4
+frame = 1
 playing = true
 
 [node name="ShadowSprite" type="Sprite" parent="."]
@@ -96,7 +100,11 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
+<<<<<<< HEAD
+position = Vector2( 0.743252, -14.7164 )
+=======
 position = Vector2( 0.99165, -15.3155 )
+>>>>>>> dfd0bd974b7de866b3859d6c6cb891cdb82fdc9c
 shape = SubResource( 10 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
