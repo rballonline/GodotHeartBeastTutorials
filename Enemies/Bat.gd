@@ -18,6 +18,7 @@ var state = IDLE
 
 onready var stats = $Stats
 onready var detection_zone = $PlayerDetectionZone
+onready var soft_collisions = $SoftCollision
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, friction * delta)
@@ -37,7 +38,8 @@ func _physics_process(delta):
 			else:
 				state = IDLE
 
-
+	if soft_collisions.is_colliding():
+		velocity += soft_collisions.get_push_vector() * delta * 400
 	velocity = move_and_slide(velocity)		
 
 
