@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var knockback = Vector2.ZERO
-var velocity = Vector2.ZERO
+var velocity:Vector2 = Vector2.ZERO
 const BatDeathEffect = preload("res://Effects/BatDeathEffect.tscn")
 
 export var acceleration = 300
@@ -15,6 +15,7 @@ enum {
 }
 
 var state = IDLE
+var state_complete = false
 
 onready var stats = $Stats
 onready var sprite = $AnimatedSprite
@@ -23,7 +24,7 @@ onready var soft_collisions = $SoftCollision
 onready var wander_controller = $WanderController
 
 func _ready():
-	state = pick_random_state()
+	wander_controller.start_timer(0)
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, friction * delta)
@@ -34,14 +35,18 @@ func _physics_process(delta):
 			velocity = Vector2.ZERO
 			seek_player()
 			
-			if wander_controller.get_time_left() == 0:
+			if state_complete:
+				state_complete = false
 				state = pick_random_state()
+				wander_controller.update_position()
 				wander_controller.start_timer(rand_range(1, 3))
 		WANDER:
 			seek_player()
 			
-			if wander_controller.get_time_left() == 0:
+			if state_complete:
+				state_complete = false
 				state = pick_random_state()
+				wander_controller.update_position()
 				wander_controller.start_timer(rand_range(1, 3))
 			
 			var direction = global_position.direction_to(wander_controller.target_position)
@@ -62,13 +67,14 @@ func _physics_process(delta):
 		velocity += soft_collisions.get_push_vector() * delta * 400
 	velocity = move_and_slide(velocity)		
 
-
 func seek_player():
 	if detection_zone.can_see_player():
 		state = CHASE
 
 func pick_random_state():
-	return [IDLE, WANDER].shuffle().pop_front()
+	var states = [IDLE, WANDER]
+	states.shuffle()
+	return states.pop_front()
 
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
@@ -81,6 +87,5 @@ func _on_Stats_no_health():
 	get_parent().add_child(death_effect)
 	death_effect.global_position = global_position
 
-
 func _on_Timer_timeout():
-	wander_controller.update_position()
+	state_complete = true
