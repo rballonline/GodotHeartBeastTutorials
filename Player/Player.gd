@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.LEFT
 var stats = PlayerStats
@@ -83,5 +85,8 @@ func move():
 	velocity = move_and_slide(velocity)
 
 func _on_HurtBox_area_entered(_area):
+	print("Player Here")
 	stats.health -= 1
 	hurtbox.start_invicibility(0.5)
+	var sound = PlayerHurtSound.instance()
+	get_tree().current_scene.add_child(sound)

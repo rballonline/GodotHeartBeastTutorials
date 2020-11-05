@@ -17,6 +17,9 @@ func set_invincible(value):
 func start_invicibility(duration):
 	self.invincible = true
 	timer.start(duration)
+	
+func _on_HurtBox_area_entered(_area):
+	print("here")
 
 func _on_Timer_timeout():
 	self.invincible = false
