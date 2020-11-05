@@ -68,7 +68,7 @@ script = ExtResource( 3 )
 position = Vector2( 0, -12 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 4
+frame = 2
 playing = true
 
 [node name="ShadowSprite" type="Sprite" parent="."]
@@ -119,7 +119,7 @@ script = ExtResource( 10 )
 [node name="Timer" type="Timer" parent="WanderController"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
-[connection signal="timeout" from="WanderController/Timer" to="WanderController" method="_on_Timer_timeout"]
+[connection signal="timeout" from="WanderController/Timer" to="." method="_on_Timer_timeout"]
 
 [editable path="HurtBox"]
 
