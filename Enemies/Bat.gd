@@ -19,6 +19,7 @@ var state = IDLE
 onready var stats = $Stats
 onready var detection_zone = $PlayerDetectionZone
 onready var soft_collisions = $SoftCollision
+onready var wander_controller = $WanderController
 
 func _physics_process(delta):
 	knockback = knockback.move_toward(Vector2.ZERO, friction * delta)
@@ -28,12 +29,25 @@ func _physics_process(delta):
 		IDLE:
 			velocity = Vector2.ZERO
 			seek_player()
+			
+			if wander_controller.get_time_left() == 0:
+				state = pick_random_state([IDLE, WANDER])
+				wander_controller.start_timer(rand_range(1, 3))
 		WANDER:
-			pass
+			seek_player()
+			
+			if wander_controller.get_time_left() == 0:
+				state = pick_random_state([IDLE, WANDER])
+				wander_controller.start_timer(rand_range(1, 3))
+			
+			var direction = global_position.direction_to(wander_controller.target_position)
+			var distance = global_position.distance_to(wander_controller.target_position)
+			velocity = velocity.move_toward(direction * max_speed, distance * delta)
+			
 		CHASE:
 			var player = detection_zone.player
 			if player != null:
-				var direction = (player.global_position - global_position).normalized() # global_position.direction_to(player.global_position) would also work
+				var direction = global_position.direction_to(player.global_position)
 				velocity = velocity.move_toward(direction * max_speed, acceleration * delta)
 			else:
 				state = IDLE
@@ -46,6 +60,10 @@ func _physics_process(delta):
 func seek_player():
 	if detection_zone.can_see_player():
 		state = CHASE
+
+func pick_random_state(state_list):
+	state_list.shuffle()
+	return state_list.pop_front()
 
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage

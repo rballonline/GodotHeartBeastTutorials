@@ -82,6 +82,6 @@ func roll_complete():
 func move():
 	velocity = move_and_slide(velocity)
 
-func _on_HurtBox_area_entered(area):
+func _on_HurtBox_area_entered(_area):
 	stats.health -= 1
 	hurtbox.start_invicibility(0.5)

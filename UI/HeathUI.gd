@@ -4,7 +4,7 @@ var hearts = 4 setget set_hearts
 var max_hearts = 4 setget set_max_hearts
 
 onready var full = $HealthUIFull
-onready var empty = $HealthUIEmpty
+onready var empty = $HeathUIEmpty
 
 func set_hearts(value):
 	hearts = clamp(value, 0, max_hearts)
