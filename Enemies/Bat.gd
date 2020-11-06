@@ -3,6 +3,7 @@ extends KinematicBody2D
 var knockback = Vector2.ZERO
 var velocity:Vector2 = Vector2.ZERO
 const BatDeathEffect = preload("res://Effects/BatDeathEffect.tscn")
+var AudioPlayer: AudioStreamPlayer = $AudioStreamPlayer
 
 export var acceleration = 300
 export var max_speed = 50
@@ -80,6 +81,11 @@ func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
 	print(stats.health)
 	knockback = area.knockback_vector * 120
+	var ap = AudioPlayer.instance()
+	get_parent().add_child(ap)
+
+func _on_AudioStreamPlayer_finished():
+	
 
 func _on_Stats_no_health():	
 	queue_free()
