@@ -3,7 +3,6 @@ extends KinematicBody2D
 var knockback = Vector2.ZERO
 var velocity:Vector2 = Vector2.ZERO
 const BatDeathEffect = preload("res://Effects/BatDeathEffect.tscn")
-var AudioPlayer: AudioStreamPlayer = $AudioStreamPlayer
 
 export var acceleration = 300
 export var max_speed = 50
@@ -23,6 +22,7 @@ onready var sprite = $AnimatedSprite
 onready var detection_zone = $PlayerDetectionZone
 onready var soft_collisions = $SoftCollision
 onready var wander_controller = $WanderController
+onready var audioPlayer: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready():
 	wander_controller.start_timer(0)
@@ -34,27 +34,13 @@ func _physics_process(delta):
 	match state:
 		IDLE:
 			velocity = Vector2.ZERO
-			seek_player()
-			
-			if state_complete:
-				state_complete = false
-				state = pick_random_state()
-				wander_controller.update_position()
-				wander_controller.start_timer(rand_range(1, 3))
+			check_state()
 		WANDER:
-			seek_player()
-			
-			if state_complete:
-				state_complete = false
-				state = pick_random_state()
-				wander_controller.update_position()
-				wander_controller.start_timer(rand_range(1, 3))
-			
+			check_state()			
 			var direction = global_position.direction_to(wander_controller.target_position)
 			var distance = global_position.distance_to(wander_controller.target_position)
 			velocity = velocity.move_toward(direction * max_speed, distance * delta)
-			sprite.flip_h = velocity.x < 0
-			
+			sprite.flip_h = velocity.x < 0			
 		CHASE:
 			var player = detection_zone.player
 			if player != null:
@@ -76,18 +62,23 @@ func pick_random_state():
 	var states = [IDLE, WANDER]
 	states.shuffle()
 	return states.pop_front()
+	
+func check_state():	
+	seek_player()			
+	if state_complete:
+		state_complete = false
+		state = pick_random_state()
+		wander_controller.update_position()
+		wander_controller.start_timer(rand_range(1, 3))
 
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
 	print(stats.health)
 	knockback = area.knockback_vector * 120
-	var ap = AudioPlayer.instance()
-	get_parent().add_child(ap)
-
-func _on_AudioStreamPlayer_finished():
+	audioPlayer.play()
 	
 
-func _on_Stats_no_health():	
+func _on_Stats_no_health():
 	queue_free()
 	var death_effect = BatDeathEffect.instance()
 	get_parent().add_child(death_effect)
