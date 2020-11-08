@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
+path="res://.import/EmptyInventorySlot.png-eed766d37feb8f4fab6da81b33a744a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Bush.png"
-dest_files=[ "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex" ]
+source_file="res://UI/EmptyInventorySlot.png"
+dest_files=[ "res://.import/EmptyInventorySlot.png-eed766d37feb8f4fab6da81b33a744a7.stex" ]
 
 [params]
 
