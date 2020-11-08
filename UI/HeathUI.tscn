@@ -19,7 +19,7 @@ texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="HealthUIFull" type="TextureRect" parent="."]
-margin_right = 15.0
 margin_bottom = 11.0
 texture = ExtResource( 3 )
+expand = true
 stretch_mode = 2
