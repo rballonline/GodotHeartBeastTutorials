@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
+path="res://.import/Potion.png-355df85d29fbded3b9a3ce4991e85943.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Bush.png"
-dest_files=[ "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex" ]
+source_file="res://UI/Potion.png"
+dest_files=[ "res://.import/Potion.png-355df85d29fbded3b9a3ce4991e85943.stex" ]
 
 [params]
 

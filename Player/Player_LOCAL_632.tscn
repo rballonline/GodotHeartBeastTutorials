@@ -287,7 +287,6 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=7]
 length = 0.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -303,7 +302,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=8]
 length = 0.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -319,7 +317,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=9]
 length = 0.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -335,7 +332,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=10]
 length = 0.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -623,6 +619,7 @@ animation = "IdleRight"
 animation = "IdleUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=28]
+auto_triangles = false
 blend_point_0/node = SubResource( 24 )
 blend_point_0/pos = Vector2( -1, 0 )
 blend_point_1/node = SubResource( 25 )
@@ -631,8 +628,10 @@ blend_point_2/node = SubResource( 26 )
 blend_point_2/pos = Vector2( 1, 0 )
 blend_point_3/node = SubResource( 27 )
 blend_point_3/pos = Vector2( 0, -1.1 )
+triangles = PoolIntArray( 0, 1, 2, 0, 2, 3 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
+snap = Vector2( 0.01, 0.01 )
 blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id=29]
@@ -699,16 +698,16 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=45]
 states/Attack/node = SubResource( 23 )
-states/Attack/position = Vector2( 422.6, 241.4 )
+states/Attack/position = Vector2( 389, 205.4 )
 states/Idle/node = SubResource( 28 )
-states/Idle/position = Vector2( 425.64, 113.4 )
+states/Idle/position = Vector2( 421, 96.6 )
 states/Roll/node = SubResource( 33 )
 states/Roll/position = Vector2( 424.8, -32.4 )
 states/Run/node = SubResource( 38 )
-states/Run/position = Vector2( 625, 112.907 )
+states/Run/position = Vector2( 645, 96.536 )
 transitions = [ "Idle", "Run", SubResource( 39 ), "Run", "Idle", SubResource( 40 ), "Idle", "Attack", SubResource( 41 ), "Attack", "Idle", SubResource( 42 ), "Idle", "Roll", SubResource( 43 ), "Roll", "Idle", SubResource( 44 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -16.4813, -66.6859 )
+graph_offset = Vector2( 41.5187, -10.6859 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=46]
 
@@ -722,10 +721,35 @@ height = 2.46943
 [sub_resource type="Animation" id=49]
 resource_name = "Start"
 length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=50]
 resource_name = "Stop"
 length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -747,6 +771,7 @@ rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "IdleDown"
 anims/AttackDown = SubResource( 3 )
 anims/AttackLeft = SubResource( 4 )
 anims/AttackRight = SubResource( 5 )
@@ -767,16 +792,16 @@ anims/RunUp = SubResource( 18 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 46 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
 parameters/Roll/blend_position = Vector2( 0, 1 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 visible = false
 position = Vector2( 0, -4 )
-rotation = 1.5708
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
@@ -803,10 +828,12 @@ shape = SubResource( 48 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
-[node name="BlinkAnimation" type="AnimationPlayer" parent="."]
+[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
+[connection signal="invincible_ended" from="HurtBox" to="." method="_on_HurtBox_invincible_ended"]
+[connection signal="invincible_started" from="HurtBox" to="." method="_on_HurtBox_invincible_started"]
 
 [editable path="HitboxPivot/SwordHitBox"]
 

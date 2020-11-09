@@ -14,6 +14,7 @@ const friction = 450
 onready var animation = $AnimationPlayer
 onready var blink_animation = $BlinkAnimationPlayer
 onready var animation_tree = $AnimationTree
+# This gives us access to the various animation states $AnimationTree.parameters.playback
 onready var animation_state = animation_tree.get("parameters/playback")
 onready var sword_hitbox = $HitboxPivot/SwordHitBox
 onready var hurtbox = $HurtBox
@@ -45,16 +46,18 @@ func move_state(delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 	
-	animation_tree.set("parameters/Idle/blend_position", input_vector)
-	animation_tree.set("parameters/Run/blend_position", input_vector)
-	animation_tree.set("parameters/Attack/blend_position", input_vector)
-	animation_tree.set("parameters/Roll/blend_position", input_vector)
 	
 	if input_vector != Vector2.ZERO:
 		roll_vector = input_vector
 		sword_hitbox.knockback_vector = input_vector
 		animation_state.travel("Run")
 		velocity = velocity.move_toward(input_vector * player_speed, acceleration * delta)
+		
+		# This is set when the input_vector isn't 0 so it keeps it's direction after a key or state is changed
+		animation_tree.set("parameters/Idle/blend_position", input_vector)
+		animation_tree.set("parameters/Run/blend_position", input_vector)
+		animation_tree.set("parameters/Attack/blend_position", input_vector)
+		animation_tree.set("parameters/Roll/blend_position", input_vector)
 		
 		if Input.is_action_just_pressed("roll"):
 			state = ROLL
