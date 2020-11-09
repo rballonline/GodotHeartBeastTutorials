@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HeathUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -503,12 +504,16 @@ tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 0, 0, 196608, 1, 0, 196610, 6, 0, 196608, 7, 0, 196609, 8, 0, 6, 9, 0, 2, 65544, 0, 131072, 65545, 0, 131074, 196613, 0, 196611, 262144, 0, 0, 262145, 0, 1, 262146, 0, 2, 262153, 0, 3, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 196613, 327683, 0, 196609, 327684, 0, 196610, 327687, 0, 196608, 327688, 0, 196609, 327689, 0, 196615 )
+tile_data = PoolIntArray( -4, 0, 4, -3, 0, 196609, -2, 0, 196609, -1, 0, 196609, -65536, 0, 6, -65535, 0, 5, -65534, 0, 196609, -65533, 0, 196609, -65532, 0, 196609, -65531, 0, 196609, -65530, 0, 7, 65532, 0, 65539, 0, 0, 131072, 1, 0, 131074, 6, 0, 196612, 7, 0, 196609, 8, 0, 7, 131068, 0, 65539, 65544, 0, 196612, 65545, 0, 196609, 65546, 0, 7, 196604, 0, 65539, 131082, 0, 65539, 262140, 0, 65539, 196613, 0, 196611, 196618, 0, 65539, 327676, 0, 196612, 327677, 0, 7, 327679, 0, 0, 262144, 0, 1, 262145, 0, 1, 262146, 0, 2, 262153, 0, 4, 262154, 0, 196615, 393213, 0, 196612, 393214, 0, 196609, 393215, 0, 196614, 327680, 0, 131073, 327681, 0, 131073, 327682, 0, 196613, 327683, 0, 196609, 327684, 0, 7, 327687, 0, 4, 327688, 0, 196609, 327689, 0, 196615, 393220, 0, 196612, 393221, 0, 196609, 393222, 0, 196609, 393223, 0, 196615 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( 32, 72 )
-current = true
-smoothing_enabled = true
+
+[node name="TopLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( -128, -32 )
+
+[node name="BottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 320, 191 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -528,6 +533,9 @@ position = Vector2( 184, 88 )
 
 [node name="Bush3" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 72, 112 )
+
+[node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -112, 72 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 
@@ -554,6 +562,18 @@ position = Vector2( 64, 16 )
 [node name="Grass5" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 64, 0 )
 
+[node name="Grass6" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -16, 0 )
+
+[node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -32, 0 )
+
+[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -48, 144 )
+
+[node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( -64, 144 )
+
 [node name="Bat4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 215.744, 157.306 )
 
@@ -571,3 +591,5 @@ position = Vector2( 145.644, 28.1764 )
 [node name="HeathUI" parent="CanvasLayer" instance=ExtResource( 8 )]
 margin_right = 83.0
 margin_bottom = 18.0
+
+[editable path="Camera2D"]

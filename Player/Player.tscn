@@ -722,10 +722,34 @@ height = 2.46943
 [sub_resource type="Animation" id=49]
 resource_name = "Start"
 length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0, 1.0 ]
+}
 
 [sub_resource type="Animation" id=50]
 resource_name = "Stop"
 length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/alpha")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -792,7 +816,7 @@ shape = SubResource( 47 )
 disabled = true
 
 [node name="HurtBox" parent="." instance=ExtResource( 5 )]
-visible = false
+position = Vector2( 0.0994377, -4.27593 )
 collision_layer = 4
 collision_mask = 0
 
@@ -803,7 +827,7 @@ shape = SubResource( 48 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
-[node name="BlinkAnimation" type="AnimationPlayer" parent="."]
+[node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Start = SubResource( 49 )
 anims/Stop = SubResource( 50 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
