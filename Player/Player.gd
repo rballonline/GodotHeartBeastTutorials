@@ -12,6 +12,7 @@ const roll_speed = 145
 const friction = 450
 
 onready var animation = $AnimationPlayer
+onready var blink_animation = $BlinkAnimationPlayer
 onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get("parameters/playback")
 onready var sword_hitbox = $HitboxPivot/SwordHitBox
@@ -84,9 +85,15 @@ func roll_complete():
 	state = MOVE
 		
 
-func _on_HurtBox_area_entered(_area):
-	print("Player Here")
-	stats.health -= 1
+func _on_HurtBox_area_entered(area):
+	stats.health -= area.damage
 	hurtbox.start_invicibility(0.5)
 	var sound = PlayerHurtSound.instance()
 	get_tree().current_scene.add_child(sound)
+
+
+func _on_HurtBox_invincible_started():
+	blink_animation.play("Start")
+
+func _on_HurtBox_invincible_ended():
+	blink_animation.play("Stop")

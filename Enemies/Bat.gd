@@ -76,6 +76,7 @@ func _on_HurtBox_area_entered(area):
 	print(stats.health)
 	knockback = area.knockback_vector * 120
 	audioPlayer.play()
+	$HurtBox.start_invicibility(0.3)
 	
 
 func _on_Stats_no_health():
@@ -86,3 +87,9 @@ func _on_Stats_no_health():
 
 func _on_Timer_timeout():
 	state_complete = true
+
+func _on_HurtBox_invincible_ended():
+	$AnimationPlayer.play("Stop")
+
+func _on_HurtBox_invincible_started():
+	$AnimationPlayer.play("Start")
