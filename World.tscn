@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://UI/HeathUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/InventoryContainer.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -591,5 +592,7 @@ position = Vector2( 145.644, 28.1764 )
 [node name="HeathUI" parent="CanvasLayer" instance=ExtResource( 8 )]
 margin_right = 83.0
 margin_bottom = 18.0
+
+[node name="InventoryContainer" parent="." instance=ExtResource( 11 )]
 
 [editable path="Camera2D"]
