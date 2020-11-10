@@ -699,13 +699,13 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=45]
 states/Attack/node = SubResource( 23 )
-states/Attack/position = Vector2( 422.6, 241.4 )
+states/Attack/position = Vector2( 389, 205.4 )
 states/Idle/node = SubResource( 28 )
-states/Idle/position = Vector2( 425.64, 113.4 )
+states/Idle/position = Vector2( 421, 96.6 )
 states/Roll/node = SubResource( 33 )
 states/Roll/position = Vector2( 424.8, -32.4 )
 states/Run/node = SubResource( 38 )
-states/Run/position = Vector2( 625, 112.907 )
+states/Run/position = Vector2( 645, 96.536 )
 transitions = [ "Idle", "Run", SubResource( 39 ), "Run", "Idle", SubResource( 40 ), "Idle", "Attack", SubResource( 41 ), "Attack", "Idle", SubResource( 42 ), "Idle", "Roll", SubResource( 43 ), "Roll", "Idle", SubResource( 44 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -16.4813, -66.6859 )
@@ -717,11 +717,12 @@ height = 12.0
 
 [sub_resource type="CapsuleShape2D" id=48]
 radius = 5.18515
-height = 2.46943
+height = 6.77304
 
 [sub_resource type="Animation" id=49]
 resource_name = "Start"
 length = 0.2
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:material:shader_param/alpha")
 tracks/0/interp = 1
@@ -763,7 +764,7 @@ material = SubResource( 1 )
 position = Vector2( 0.394066, -9.45047 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 18
+frame = 36
 
 [node name="WorldCollision" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0599785, -0.0960274 )
@@ -793,7 +794,7 @@ tree_root = SubResource( 45 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 46 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
 parameters/Roll/blend_position = Vector2( 0, 1 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
@@ -816,12 +817,12 @@ shape = SubResource( 47 )
 disabled = true
 
 [node name="HurtBox" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0.0994377, -4.27593 )
+position = Vector2( 0, -3.57164 )
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2( -0.497204, -4.80305 )
+position = Vector2( -0.100357, -2.91802 )
 shape = SubResource( 48 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

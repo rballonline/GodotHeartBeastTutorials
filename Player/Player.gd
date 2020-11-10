@@ -27,6 +27,8 @@ enum {
 
 func _ready():
 	stats.connect("no_health", self, "queue_free")
+	hurtbox.connect("invincible_started", self, "_on_HurtBox_invincible_started")
+	hurtbox.connect("invincible_ended", self, "_on_HurtBox_invincible_ended")
 	animation_tree.active = true
 	sword_hitbox.knockback_vector = roll_vector
 
