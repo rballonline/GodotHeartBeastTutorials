@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD:UI/game_menu_screen.png.import
+path="res://.import/game_menu_screen.png-68686251c5022e90c6c8347b498a74e2.stex"
+=======
 path="res://.import/EnemyDeathEffect.png-d35d077b952412e584c96e070d9a5384.stex"
+>>>>>>> 045599551bc5cec9eeffe83318be763d77e385f1:Images/EnemyDeathEffect.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD:UI/game_menu_screen.png.import
+source_file="res://UI/game_menu_screen.png"
+dest_files=[ "res://.import/game_menu_screen.png-68686251c5022e90c6c8347b498a74e2.stex" ]
+=======
 source_file="res://Images/EnemyDeathEffect.png"
 dest_files=[ "res://.import/EnemyDeathEffect.png-d35d077b952412e584c96e070d9a5384.stex" ]
+>>>>>>> 045599551bc5cec9eeffe83318be763d77e385f1:Images/EnemyDeathEffect.png.import
 
 [params]
 
