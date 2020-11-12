@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/VolumeSlider.gd" type="Script" id=1]
+[ext_resource path="res://Images/game_menu_screen.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=3]
+
+[node name="TextureRect" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+margin_left = 176.0
+margin_top = 72.0
+margin_right = 304.0
+margin_bottom = 96.0
+max_value = 1.0
+step = 0.05
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 112.0
+margin_top = 80.0
+margin_right = 168.0
+margin_bottom = 96.0
+text = "Volume"
+[connection signal="mouse_exited" from="VolumeSlider" to="VolumeSlider" method="release_focus"]
+[connection signal="value_changed" from="VolumeSlider" to="VolumeSlider" method="_on_VolumeSlider_value_changed"]

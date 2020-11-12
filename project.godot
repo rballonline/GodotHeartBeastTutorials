@@ -27,11 +27,12 @@ _global_script_class_icons={
 [application]
 
 config/name="GoDotHeartBeast"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Scenes/TitleScreen.tscn"
 
 [autoload]
 
 PlayerStats="*res://Player/PlayerStats.tscn"
+SceneChanger="*res://SceneChanger.tscn"
 
 [display]
 
