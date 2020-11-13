@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Images/Bush.png" type="Texture" id=1]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 7.97193
 height = 12.0
