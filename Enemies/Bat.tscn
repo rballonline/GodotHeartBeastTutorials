@@ -13,37 +13,28 @@
 [ext_resource path="res://Sound/Hit.wav" type="AudioStream" id=11]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=12]
 
-
-
-
-
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
 shader = ExtResource( 12 )
 shader_param/alpha = 0.0
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 16, 0, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=4]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 32, 0, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=5]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 48, 0, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=6]
-flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 64, 0, 16, 24 )
 
@@ -113,6 +104,7 @@ material = SubResource( 1 )
 position = Vector2( 0, -12 )
 frames = SubResource( 7 )
 animation = "Fly"
+frame = 1
 playing = true
 
 [node name="ShadowSprite" type="Sprite" parent="."]
@@ -153,6 +145,7 @@ position = Vector2( 0.99165, -15.3155 )
 shape = SubResource( 11 )
 
 [node name="SoftCollision" parent="." instance=ExtResource( 9 )]
+visible = false
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
 shape = SubResource( 12 )

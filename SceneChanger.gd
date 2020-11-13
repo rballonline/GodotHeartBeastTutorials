@@ -9,7 +9,7 @@ onready var tween = $Tween
 func change_scene(path, delay = 0.0):
 	var current_background_music: AudioStreamPlayer = get_tree().get_current_scene().find_node("BackgroundMusic")
 	if current_background_music != null:
-		tween.interpolate_property(current_background_music, "volume_db", 0, -80, 0.2, Tween.TRANS_SINE, Tween.EASE_IN, delay)
+		tween.interpolate_property(current_background_music, "volume_db", 0, -80, 0.4, Tween.TRANS_SINE, Tween.EASE_IN, delay)
 		tween.start()
 		yield(tween, "tween_completed")
 		current_background_music.stop()
