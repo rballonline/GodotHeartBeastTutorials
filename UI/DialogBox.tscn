@@ -1,9 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://UI/RichTextLabel.gd" type="Script" id=1]
+[ext_resource path="res://UI/DialogBox.gd" type="Script" id=2]
 
 [node name="DialogBox" type="Node2D"]
 visible = false
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 8.0
@@ -24,9 +25,8 @@ bbcode_enabled = true
 bbcode_text = "Some text"
 visible_characters = 12
 text = "Some text"
-script = ExtResource( 1 )
 
-[node name="Timer" type="Timer" parent="ColorRect/RichTextLabel"]
+[node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
 autostart = true
-[connection signal="timeout" from="ColorRect/RichTextLabel/Timer" to="ColorRect/RichTextLabel" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

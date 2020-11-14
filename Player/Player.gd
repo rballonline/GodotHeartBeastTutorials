@@ -21,10 +21,10 @@ onready var animation_state = animation_tree.get("parameters/playback")
 onready var sword_hitbox = $HitboxPivot/SwordHitBox
 onready var hurtbox = $HurtBox
 
-var state = MOVE
+var state = MOVE setget set_state
 
 enum {
-	MOVE, ATTACK, ROLL
+	MOVE, ATTACK, ROLL, TALKING
 }
 
 func _ready():
@@ -42,7 +42,11 @@ func _physics_process(delta):
 			attack_state(delta)
 		ROLL:
 			roll_state(delta)
-		
+		TALKING:
+			talking_state()
+
+func set_state(value):
+	state = value
 
 func move_state(delta):
 	var input_vector = Vector2.ZERO
@@ -86,6 +90,9 @@ func attack_state(_delta):
 
 func attack_complete():
 	state = MOVE
+
+func talking_state():
+	pass
 
 func roll_state(_delta):
 	velocity = roll_vector * roll_speed
