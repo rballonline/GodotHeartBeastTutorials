@@ -10,7 +10,7 @@ func on_talk():
 func _on_NoAttackZone_body_entered(player : Player):
 	player.set_can_attack(false)
 
-func _on_NoAttackZone_body_exited(player):
+func _on_NoAttackZone_body_exited(player: Player):
 	player.set_can_attack(true)
 
 func _on_DialogBox_done_talking():
