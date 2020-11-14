@@ -1,3 +1,4 @@
+class_name Player
 extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
@@ -5,6 +6,7 @@ const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.LEFT
 var stats = PlayerStats
+var can_attack = true setget set_can_attack
 
 const player_speed = 90
 const acceleration = 450
@@ -60,6 +62,7 @@ func move_state(delta):
 		animation_tree.set("parameters/Run/blend_position", input_vector)
 		animation_tree.set("parameters/Attack/blend_position", input_vector)
 		animation_tree.set("parameters/Roll/blend_position", input_vector)
+		animation_tree.set("parameters/Interact/blend_position", input_vector)
 		
 		if Input.is_action_just_pressed("roll"):
 			state = ROLL
@@ -71,11 +74,15 @@ func move_state(delta):
 	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
-		
-		
+
+func set_can_attack(value):
+	can_attack = value
 
 func attack_state(_delta):
-	animation_state.travel("Attack")
+	if can_attack:
+		animation_state.travel("Attack")
+	else:
+		animation_state.travel("Interact")
 
 func attack_complete():
 	state = MOVE
