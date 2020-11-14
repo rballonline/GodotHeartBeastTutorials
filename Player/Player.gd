@@ -45,9 +45,6 @@ func _physics_process(delta):
 		TALKING:
 			talking_state()
 
-func set_state(value):
-	state = value
-
 func move_state(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -77,22 +74,22 @@ func move_state(delta):
 	velocity = move_and_slide(velocity)
 	
 	if Input.is_action_just_pressed("attack"):
-		state = ATTACK
+		if can_attack:
+			state = ATTACK
+		else:
+			state = TALKING
 
 func set_can_attack(value):
 	can_attack = value
 
 func attack_state(_delta):
-	if can_attack:
-		animation_state.travel("Attack")
-	else:
-		animation_state.travel("Interact")
+	animation_state.travel("Attack")
 
 func attack_complete():
 	state = MOVE
 
 func talking_state():
-	pass
+	animation_state.travel("Interact")
 
 func roll_state(_delta):
 	velocity = roll_vector * roll_speed
@@ -102,7 +99,6 @@ func roll_state(_delta):
 func roll_complete():
 	velocity = velocity * 0.8
 	state = MOVE
-		
 
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
@@ -110,9 +106,24 @@ func _on_HurtBox_area_entered(area):
 	var sound = PlayerHurtSound.instance()
 	get_tree().current_scene.add_child(sound)
 
+func set_state(value):
+	state = value
 
 func _on_HurtBox_invincible_started():
 	blink_animation.play("Start")
 
 func _on_HurtBox_invincible_ended():
 	blink_animation.play("Stop")
+
+var interacting = false
+func _on_SwordHitBox_area_entered(area):
+	var item = area.get_parent()
+	if item.has_method("on_talk") and !interacting:
+		interacting = true
+		area.get_parent().on_talk() # <- this
+		area.get_parent().connect("end_talking", self, "end_talking")
+	
+func end_talking(node):
+	interacting = false
+	node.disconnect("end_talking", self, "end_talking")
+	state = MOVE

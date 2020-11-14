@@ -1011,7 +1011,7 @@ material = SubResource( 1 )
 position = Vector2( 0.394066, -9.45047 )
 texture = ExtResource( 2 )
 hframes = 60
-frame = 6
+frame = 21
 
 [node name="WorldCollision" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0599785, -0.0960274 )
@@ -1052,7 +1052,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
-rotation = 4.71239
+rotation = 1.5708
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
@@ -1085,6 +1085,7 @@ anims/Start = SubResource( 60 )
 anims/Stop = SubResource( 61 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+[connection signal="area_entered" from="HitboxPivot/SwordHitBox" to="." method="_on_SwordHitBox_area_entered"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 
 [editable path="HitboxPivot/SwordHitBox"]

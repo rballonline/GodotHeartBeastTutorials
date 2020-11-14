@@ -41,7 +41,7 @@ height = 7.59122
 height = 4.963
 
 [sub_resource type="CircleShape2D" id=9]
-radius = 67.0041
+radius = 36.6165
 
 [node name="Santa" type="Node2D"]
 position = Vector2( 0.885857, -2.65037 )
@@ -50,6 +50,7 @@ script = ExtResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 34.25, -5 )
 frames = SubResource( 6 )
+frame = 2
 playing = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite"]
@@ -61,7 +62,9 @@ visible = false
 rotation = 1.5708
 shape = SubResource( 7 )
 
-[node name="HurtBox" parent="." instance=ExtResource( 1 )]
+[node name="HurtBox" parent="." groups=[
+"NPC",
+] instance=ExtResource( 1 )]
 visible = false
 position = Vector2( 35.75, -5.25 )
 collision_layer = 8
@@ -72,7 +75,6 @@ position = Vector2( -34.9764, 3.77008 )
 shape = SubResource( 8 )
 
 [node name="NoAttackZone" type="Area2D" parent="."]
-visible = false
 position = Vector2( 35, 0.25 )
 collision_layer = 0
 collision_mask = 2
