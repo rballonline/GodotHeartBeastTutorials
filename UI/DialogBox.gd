@@ -7,7 +7,7 @@ signal done_talking
 
 var dialog := ["Yo bitch. I'm Santa Claus. I wanna FIGHT!", "Fighting is great. Keeps me fit!"]
 var page := 0
-var started = false
+var started := false
 
 func start():	
 	print("Starting text")

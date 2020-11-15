@@ -5,17 +5,14 @@
 [ext_resource path="res://World/Chest.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 64, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=2]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 192, 704, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=3]
-flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 256, 704, 64, 64 )
 
@@ -27,7 +24,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=5]
 radius = 2.22492
 height = 13.9573
 
@@ -46,15 +43,19 @@ animation = "Open"
 visible = false
 position = Vector2( 0.648315, 4.48181 )
 rotation = 1.5708
-shape = SubResource( 7 )
+shape = SubResource( 5 )
 
 [node name="HurtBox" parent="." instance=ExtResource( 2 )]
+visible = false
 collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
 position = Vector2( 0.589924, 1.41582 )
 shape = SubResource( 6 )
+
+[node name="Item" type="Node2D" parent="."]
+position = Vector2( 0.707905, -6.72511 )
 [connection signal="area_entered" from="HurtBox" to="." method="_on_HurtBox_area_entered"]
 
 [editable path="HurtBox"]

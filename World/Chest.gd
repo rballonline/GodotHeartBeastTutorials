@@ -1,10 +1,18 @@
 extends StaticBody2D
 
-enum { CLOSED, OPENED }
+export(PackedScene) var Item
 
 onready var animation = $Animation
 
-export var state = CLOSED
+var _closed = true
 
-func _on_HurtBox_area_entered(area):
-	animation.play()
+func _ready():
+	assert(Item!=null)
+
+func _on_HurtBox_area_entered(_area):
+	if _closed:
+		animation.play()
+		var item = Item.instance()
+		$Item.add_child(item)
+		item.play($Item.get_global_transform().get_origin())
+	_closed = false

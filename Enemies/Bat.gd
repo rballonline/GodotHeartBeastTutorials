@@ -52,7 +52,7 @@ func _physics_process(delta):
 
 	if soft_collisions.is_colliding():
 		velocity += soft_collisions.get_push_vector() * delta * 400
-	velocity = move_and_slide(velocity)		
+	velocity = move_and_slide(velocity)	
 
 func seek_player():
 	if detection_zone.can_see_player():
