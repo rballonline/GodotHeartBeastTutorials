@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Necklace1.wav-7ba7521dda939fe905a2c8e8b3a68a8d.sample"
+
+[deps]
+
+source_file="res://Sound/Equipement (menu)/Necklace1.wav"
+dest_files=[ "res://.import/Necklace1.wav-7ba7521dda939fe905a2c8e8b3a68a8d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

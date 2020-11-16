@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Monster7-B.wav-29fe0eb175d4e2efed9f44666f0b36d9.sample"
+
+[deps]
+
+source_file="res://Sound/Monster/Monster7-B.wav"
+dest_files=[ "res://.import/Monster7-B.wav-29fe0eb175d4e2efed9f44666f0b36d9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

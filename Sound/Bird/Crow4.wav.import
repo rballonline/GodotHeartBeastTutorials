@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Crow4.wav-b5bdfc05a77097cc72e3b4e163554ba7.sample"
+
+[deps]
+
+source_file="res://Sound/Bird/Crow4.wav"
+dest_files=[ "res://.import/Crow4.wav-b5bdfc05a77097cc72e3b4e163554ba7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

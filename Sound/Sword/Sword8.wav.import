@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sword8.wav-7e66233b97632c50c0d1bdf3c8c5da3c.sample"
+
+[deps]
+
+source_file="res://Sound/Sword/Sword8.wav"
+dest_files=[ "res://.import/Sword8.wav-7e66233b97632c50c0d1bdf3c8c5da3c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Leaf2.wav-5b4c6c11958b715a379043a938e17438.sample"
+
+[deps]
+
+source_file="res://Sound/Grass-Leaf/Leaf2.wav"
+dest_files=[ "res://.import/Leaf2.wav-5b4c6c11958b715a379043a938e17438.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

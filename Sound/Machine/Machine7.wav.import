@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Machine7.wav-56ada7816ac3a54dddc97f82e76e8294.sample"
+
+[deps]
+
+source_file="res://Sound/Machine/Machine7.wav"
+dest_files=[ "res://.import/Machine7.wav-56ada7816ac3a54dddc97f82e76e8294.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

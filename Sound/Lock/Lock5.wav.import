@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lock5.wav-d36ccefcbab32ec6389234c77ad7b03d.sample"
+
+[deps]
+
+source_file="res://Sound/Lock/Lock5.wav"
+dest_files=[ "res://.import/Lock5.wav-d36ccefcbab32ec6389234c77ad7b03d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

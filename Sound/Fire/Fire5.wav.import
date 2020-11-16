@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fire5.wav-f4a7f1d93355676c5fb8e1f72c26d53a.sample"
+
+[deps]
+
+source_file="res://Sound/Fire/Fire5.wav"
+dest_files=[ "res://.import/Fire5.wav-f4a7f1d93355676c5fb8e1f72c26d53a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

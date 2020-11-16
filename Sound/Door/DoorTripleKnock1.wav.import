@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DoorTripleKnock1.wav-1505b3b0640fa8de8e1c7af43a541727.sample"
+
+[deps]
+
+source_file="res://Sound/Door/DoorTripleKnock1.wav"
+dest_files=[ "res://.import/DoorTripleKnock1.wav-1505b3b0640fa8de8e1c7af43a541727.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

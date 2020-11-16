@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alarm3.wav-befd45e4c3086fb109051e8b32b6ca19.sample"
+
+[deps]
+
+source_file="res://Sound/Alarm(Loopable)/Alarm3.wav"
+dest_files=[ "res://.import/Alarm3.wav-befd45e4c3086fb109051e8b32b6ca19.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

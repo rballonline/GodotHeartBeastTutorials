@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WingFlap3.wav-b4c05a84059d1e29286e52a34f497055.sample"
+
+[deps]
+
+source_file="res://Sound/WingFlap/WingFlap3.wav"
+dest_files=[ "res://.import/WingFlap3.wav-b4c05a84059d1e29286e52a34f497055.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

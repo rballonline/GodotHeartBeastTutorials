@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MetalHit2.wav-06de04df99fbe39586bcbbc7cc34c4d8.sample"
+
+[deps]
+
+source_file="res://Sound/Hit(Impact)/MetalHit2.wav"
+dest_files=[ "res://.import/MetalHit2.wav-06de04df99fbe39586bcbbc7cc34c4d8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

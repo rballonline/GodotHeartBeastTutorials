@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/IceBreak5.wav-070b93a3172215a76d7945683d6948ef.sample"
+
+[deps]
+
+source_file="res://Sound/Ice/IceBreak5.wav"
+dest_files=[ "res://.import/IceBreak5.wav-070b93a3172215a76d7945683d6948ef.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

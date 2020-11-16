@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GunMagazine1.wav-c076925c7a6d39554f76aafd5c38775a.sample"
+
+[deps]
+
+source_file="res://Sound/GunSound/GunMagazine1.wav"
+dest_files=[ "res://.import/GunMagazine1.wav-c076925c7a6d39554f76aafd5c38775a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

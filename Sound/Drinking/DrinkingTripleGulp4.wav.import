@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DrinkingTripleGulp4.wav-968660b6bde42a1af52d8c3017e1dc96.sample"
+
+[deps]
+
+source_file="res://Sound/Drinking/DrinkingTripleGulp4.wav"
+dest_files=[ "res://.import/DrinkingTripleGulp4.wav-968660b6bde42a1af52d8c3017e1dc96.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Thunder1.wav-fe16def9ce16e52d9f60b34953e365ac.sample"
+
+[deps]
+
+source_file="res://Sound/Spell/Thunder1.wav"
+dest_files=[ "res://.import/Thunder1.wav-fe16def9ce16e52d9f60b34953e365ac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

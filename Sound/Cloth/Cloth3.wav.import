@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cloth3.wav-33b55ab33a511a5168627b6ff131caf7.sample"
+
+[deps]
+
+source_file="res://Sound/Cloth/Cloth3.wav"
+dest_files=[ "res://.import/Cloth3.wav-33b55ab33a511a5168627b6ff131caf7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

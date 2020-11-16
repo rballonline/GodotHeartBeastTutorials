@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Male3.wav-73113360a12f29a2811de34ad55a1941.sample"
+
+[deps]
+
+source_file="res://Sound/Human(Male-Grunt-Effort-Hurt)/Male3.wav"
+dest_files=[ "res://.import/Male3.wav-73113360a12f29a2811de34ad55a1941.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WaterDrop6.wav-81cc6487ce7c0e5a72d33d322af96190.sample"
+
+[deps]
+
+source_file="res://Sound/Water/WaterDrop6.wav"
+dest_files=[ "res://.import/WaterDrop6.wav-81cc6487ce7c0e5a72d33d322af96190.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

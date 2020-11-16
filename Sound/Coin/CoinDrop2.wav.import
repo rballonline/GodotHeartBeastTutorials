@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CoinDrop2.wav-530ff78cd47bf6b22ef7c07adc786a78.sample"
+
+[deps]
+
+source_file="res://Sound/Coin/CoinDrop2.wav"
+dest_files=[ "res://.import/CoinDrop2.wav-530ff78cd47bf6b22ef7c07adc786a78.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

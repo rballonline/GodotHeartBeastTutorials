@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tome1.wav-2203346af18d4159f25b46697470983d.sample"
+
+[deps]
+
+source_file="res://Sound/Equipement (menu)/Tome1.wav"
+dest_files=[ "res://.import/Tome1.wav-2203346af18d4159f25b46697470983d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

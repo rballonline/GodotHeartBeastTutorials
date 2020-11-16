@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DrinkingSingleGulp1.wav-bcf69b6f60d96ce6611de2cda2546695.sample"
+
+[deps]
+
+source_file="res://Sound/Drinking/DrinkingSingleGulp1.wav"
+dest_files=[ "res://.import/DrinkingSingleGulp1.wav-bcf69b6f60d96ce6611de2cda2546695.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

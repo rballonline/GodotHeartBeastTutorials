@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/StepArmor2.wav-483f4b8cbf357e6680d1aa11708e183b.sample"
+
+[deps]
+
+source_file="res://Sound/FootStep/StepArmor2.wav"
+dest_files=[ "res://.import/StepArmor2.wav-483f4b8cbf357e6680d1aa11708e183b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

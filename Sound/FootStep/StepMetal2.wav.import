@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/StepMetal2.wav-057a2662518d28e5011b94cead1ce1a7.sample"
+
+[deps]
+
+source_file="res://Sound/FootStep/StepMetal2.wav"
+dest_files=[ "res://.import/StepMetal2.wav-057a2662518d28e5011b94cead1ce1a7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

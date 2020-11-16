@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/RockFootStep1.wav-5774076f001eabdfcd4bb19466753d4e.sample"
+
+[deps]
+
+source_file="res://Sound/FootStep/RockFootStep1.wav"
+dest_files=[ "res://.import/RockFootStep1.wav-5774076f001eabdfcd4bb19466753d4e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

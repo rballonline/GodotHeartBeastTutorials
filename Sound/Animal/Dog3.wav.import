@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dog3.wav-de0d0940184998dcd0049588d2ca1892.sample"
+
+[deps]
+
+source_file="res://Sound/Animal/Dog3.wav"
+dest_files=[ "res://.import/Dog3.wav-de0d0940184998dcd0049588d2ca1892.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

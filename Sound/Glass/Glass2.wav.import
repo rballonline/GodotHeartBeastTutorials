@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Glass2.wav-a24e3958a9311e6e9f1961ac2f0e7e20.sample"
+
+[deps]
+
+source_file="res://Sound/Glass/Glass2.wav"
+dest_files=[ "res://.import/Glass2.wav-a24e3958a9311e6e9f1961ac2f0e7e20.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

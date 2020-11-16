@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Wood4.wav-7daf73e41d29fe40e43ed5df276392df.sample"
+
+[deps]
+
+source_file="res://Sound/Hit(Impact)/Wood4.wav"
+dest_files=[ "res://.import/Wood4.wav-7daf73e41d29fe40e43ed5df276392df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

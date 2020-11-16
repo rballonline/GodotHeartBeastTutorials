@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Punch6.wav-7ee7904cb869877d8d590ae64f8a4c3c.sample"
+
+[deps]
+
+source_file="res://Sound/Punch/Punch6.wav"
+dest_files=[ "res://.import/Punch6.wav-7ee7904cb869877d8d590ae64f8a4c3c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

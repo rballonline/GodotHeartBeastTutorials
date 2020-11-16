@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Fly2.wav-c306cb670de0bf92eba81a6ec10ef513.sample"
+
+[deps]
+
+source_file="res://Sound/Insect/Fly2.wav"
+dest_files=[ "res://.import/Fly2.wav-c306cb670de0bf92eba81a6ec10ef513.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

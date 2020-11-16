@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Female2.wav-7702f6ba2448f41adf6dbb87680eda5d.sample"
+
+[deps]
+
+source_file="res://Sound/Human(Female-Grunt-Effort-Hurt)/Female2.wav"
+dest_files=[ "res://.import/Female2.wav-7702f6ba2448f41adf6dbb87680eda5d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

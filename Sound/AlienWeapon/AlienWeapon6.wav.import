@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/AlienWeapon6.wav-31314bdf87aa6c2ae4a01433cd5e76ff.sample"
+
+[deps]
+
+source_file="res://Sound/AlienWeapon/AlienWeapon6.wav"
+dest_files=[ "res://.import/AlienWeapon6.wav-31314bdf87aa6c2ae4a01433cd5e76ff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

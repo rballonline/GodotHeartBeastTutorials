@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alarm6.wav-275003fb2d69b538d15b945303b59753.sample"
+
+[deps]
+
+source_file="res://Sound/Alarm(Loopable)/Alarm6.wav"
+dest_files=[ "res://.import/Alarm6.wav-275003fb2d69b538d15b945303b59753.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

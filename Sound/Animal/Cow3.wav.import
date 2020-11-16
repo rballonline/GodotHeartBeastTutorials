@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cow3.wav-7d705e7b211c01e2e9b36d54fb091ea4.sample"
+
+[deps]
+
+source_file="res://Sound/Animal/Cow3.wav"
+dest_files=[ "res://.import/Cow3.wav-7d705e7b211c01e2e9b36d54fb091ea4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

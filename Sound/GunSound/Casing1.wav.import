@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Casing1.wav-91f01e2c6d002842fc4bbed74c115842.sample"
+
+[deps]
+
+source_file="res://Sound/GunSound/Casing1.wav"
+dest_files=[ "res://.import/Casing1.wav-91f01e2c6d002842fc4bbed74c115842.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

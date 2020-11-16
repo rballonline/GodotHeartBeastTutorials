@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ClosingBook1.wav-a6f4460da314be1165ebbcd3a40f741c.sample"
+
+[deps]
+
+source_file="res://Sound/Book/ClosingBook1.wav"
+dest_files=[ "res://.import/ClosingBook1.wav-a6f4460da314be1165ebbcd3a40f741c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

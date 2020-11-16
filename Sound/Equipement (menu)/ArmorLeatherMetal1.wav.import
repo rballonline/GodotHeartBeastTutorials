@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ArmorLeatherMetal1.wav-214d0eb06642e2601f43a9251c82ea9c.sample"
+
+[deps]
+
+source_file="res://Sound/Equipement (menu)/ArmorLeatherMetal1.wav"
+dest_files=[ "res://.import/ArmorLeatherMetal1.wav-214d0eb06642e2601f43a9251c82ea9c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

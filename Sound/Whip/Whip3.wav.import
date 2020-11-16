@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Whip3.wav-b02ebabd8c3d1cf2ede4689f0af0f99e.sample"
+
+[deps]
+
+source_file="res://Sound/Whip/Whip3.wav"
+dest_files=[ "res://.import/Whip3.wav-b02ebabd8c3d1cf2ede4689f0af0f99e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Chain6.wav-fca326cf6bcc951d8897313e9578afa7.sample"
+
+[deps]
+
+source_file="res://Sound/Chain/Chain6.wav"
+dest_files=[ "res://.import/Chain6.wav-fca326cf6bcc951d8897313e9578afa7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

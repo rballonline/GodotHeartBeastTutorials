@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Spelll4.wav-52aa30cb5ce562200c44760cb24c7c3d.sample"
+
+[deps]
+
+source_file="res://Sound/Spell/Spelll4.wav"
+dest_files=[ "res://.import/Spelll4.wav-52aa30cb5ce562200c44760cb24c7c3d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MetalGate1.wav-8c46d9ca47e3a2a0c78219f65d3755db.sample"
+
+[deps]
+
+source_file="res://Sound/Door/MetalGate1.wav"
+dest_files=[ "res://.import/MetalGate1.wav-8c46d9ca47e3a2a0c78219f65d3755db.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

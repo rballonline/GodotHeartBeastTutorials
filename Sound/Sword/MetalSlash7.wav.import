@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MetalSlash7.wav-50cb9e0fa5c962add28e5b664734414f.sample"
+
+[deps]
+
+source_file="res://Sound/Sword/MetalSlash7.wav"
+dest_files=[ "res://.import/MetalSlash7.wav-50cb9e0fa5c962add28e5b664734414f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

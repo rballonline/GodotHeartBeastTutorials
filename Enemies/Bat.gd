@@ -3,6 +3,7 @@ extends KinematicBody2D
 var knockback = Vector2.ZERO
 var velocity:Vector2 = Vector2.ZERO
 const BatDeathEffect = preload("res://Effects/BatDeathEffect.tscn")
+const Heart = preload("res://World/Heart.tscn")
 
 export var acceleration = 300
 export var max_speed = 50
@@ -73,7 +74,6 @@ func check_state():
 
 func _on_HurtBox_area_entered(area):
 	stats.health -= area.damage
-	print(stats.health)
 	knockback = area.knockback_vector * 120
 	audioPlayer.play()
 	$HurtBox.start_invicibility(0.3)
@@ -84,6 +84,13 @@ func _on_Stats_no_health():
 	var death_effect = BatDeathEffect.instance()
 	get_parent().add_child(death_effect)
 	death_effect.global_position = global_position
+	death_effect.global_position.y -= 7
+	if PlayerStats.needs_health():
+		var heart = Heart.instance()
+		heart.global_position = global_position
+		heart.global_position.y -= 7
+		heart.play()
+		get_parent().add_child(heart)
 
 func _on_Timer_timeout():
 	state_complete = true

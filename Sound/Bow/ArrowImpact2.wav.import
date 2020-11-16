@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ArrowImpact2.wav-0cf8cec574edc41b7a49003f0da6cbd6.sample"
+
+[deps]
+
+source_file="res://Sound/Bow/ArrowImpact2.wav"
+dest_files=[ "res://.import/ArrowImpact2.wav-0cf8cec574edc41b7a49003f0da6cbd6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

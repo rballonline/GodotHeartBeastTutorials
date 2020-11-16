@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/RockSlide1.wav-993204a268ad0d670ca9a5cf1421dec5.sample"
+
+[deps]
+
+source_file="res://Sound/Rock/RockSlide1.wav"
+dest_files=[ "res://.import/RockSlide1.wav-993204a268ad0d670ca9a5cf1421dec5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ghost3.wav-bb103847d38a1a6ebcb8205b7cbe9d51.sample"
+
+[deps]
+
+source_file="res://Sound/Ghost/Ghost3.wav"
+dest_files=[ "res://.import/Ghost3.wav-bb103847d38a1a6ebcb8205b7cbe9d51.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

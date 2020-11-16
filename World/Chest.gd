@@ -14,5 +14,5 @@ func _on_HurtBox_area_entered(_area):
 		animation.play()
 		var item = Item.instance()
 		$Item.add_child(item)
-		item.play($Item.get_global_transform().get_origin())
+		item.play()
 	_closed = false

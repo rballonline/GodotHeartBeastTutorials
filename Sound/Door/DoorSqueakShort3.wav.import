@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DoorSqueakShort3.wav-70d76612ef753186226a77618f2d387a.sample"
+
+[deps]
+
+source_file="res://Sound/Door/DoorSqueakShort3.wav"
+dest_files=[ "res://.import/DoorSqueakShort3.wav-70d76612ef753186226a77618f2d387a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
