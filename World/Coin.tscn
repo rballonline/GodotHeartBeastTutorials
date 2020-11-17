@@ -52,8 +52,10 @@ script = ExtResource( 2 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
-frame = 7
+frame = 4
 playing = true

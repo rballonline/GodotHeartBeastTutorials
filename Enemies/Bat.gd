@@ -89,8 +89,8 @@ func _on_Stats_no_health():
 		var heart = Heart.instance()
 		heart.global_position = global_position
 		heart.global_position.y -= 7
-		heart.play()
 		get_parent().add_child(heart)
+		heart.play(heart.get_global_transform_with_canvas().origin)
 
 func _on_Timer_timeout():
 	state_complete = true

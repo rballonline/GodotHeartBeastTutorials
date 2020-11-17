@@ -602,7 +602,7 @@ visible = false
 stretch_mode = 0
 
 [node name="Coins" parent="CanvasLayer" instance=ExtResource( 16 )]
-position = Vector2( 285, 7.5 )
+position = Vector2( 288, 8 )
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
