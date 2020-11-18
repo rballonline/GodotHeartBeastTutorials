@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=12]
 [ext_resource path="res://World/Chest.tscn" type="PackedScene" id=13]
 [ext_resource path="res://NPCs/Santa.tscn" type="PackedScene" id=14]
-[ext_resource path="res://World/RedCoin.tscn" type="PackedScene" id=15]
+[ext_resource path="res://World/Coin.tscn" type="PackedScene" id=15]
 [ext_resource path="res://UI/Coins.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=1]
@@ -556,21 +556,6 @@ position = Vector2( 72, 112 )
 [node name="Grass" parent="YSort/Grass" instance=ExtResource( 8 )]
 position = Vector2( 272, 144 )
 
-[node name="Grass6" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 240, 48 )
-
-[node name="Grass7" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 224, 32 )
-
-[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 208, -48 )
-
-[node name="Grass9" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 128, 144 )
-
-[node name="Grass10" parent="YSort/Grass" instance=ExtResource( 8 )]
-position = Vector2( 144, 144 )
-
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 8 )]
 position = Vector2( 256, 144 )
 
@@ -599,6 +584,10 @@ position = Vector2( 144, -72 )
 
 [node name="Chest" parent="YSort/Loot" instance=ExtResource( 13 )]
 position = Vector2( 31.8347, 44.1749 )
+Item = ExtResource( 15 )
+
+[node name="Chest2" parent="YSort/Loot" instance=ExtResource( 13 )]
+position = Vector2( 304.877, -26.6675 )
 Item = ExtResource( 15 )
 
 [node name="NPCs" type="YSort" parent="YSort"]
