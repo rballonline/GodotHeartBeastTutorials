@@ -1,20 +1,24 @@
 extends Node2D
 
 onready var tween = $Tween
-onready var sprite = $CanvasLayer/AnimatedSprite
+onready var collection = $CanvasLayer/CoinCollection
+onready var coin = $CoinAnchor
 onready var audio = $AudioStreamPlayer
 
-func play(position):
-	PlayerStats.add_money(1)
+export(int) var amount = 1
+
+func play(position, global_position):
 	print("Coin play()")
-	sprite.set_global_position(position)
+	coin.position = position
+	collection.set_global_position(global_position)
 	audio.play()
-	tween.interpolate_property(sprite, "modulate:a", 0.0, 1.0, 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
+	tween.interpolate_property(collection, "modulate:a", 0.0, 1.0, 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
 	tween.start()
 	yield(tween, "tween_completed")
-#	tween.interpolate_property(sprite, "scale", sprite.scale, Vector2(1.0, 1.0), 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
-#	tween.interpolate_property(sprite, "modulate:a", 1.0, 0.0, 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
-	tween.interpolate_property(sprite, "position", sprite.position, Vector2(288, 8), 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
+	coin.visible = false
+	collection.visible = true
+	tween.interpolate_property(collection, "position", collection.position, Vector2(288, 8), 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
 	tween.start()
 	yield(tween, "tween_completed")
 	queue_free()
+	PlayerStats.add_money(amount)
