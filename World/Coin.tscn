@@ -55,14 +55,13 @@ stream = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CoinCollection" type="AnimatedSprite" parent="CanvasLayer"]
-visible = false
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="CoinAnchor" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
-frame = 5
+frame = 3
 playing = true
