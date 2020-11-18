@@ -5,7 +5,6 @@ onready var sprite = $CanvasLayer/AnimatedSprite
 onready var audio = $AudioStreamPlayer
 
 func play(position):
-	PlayerStats.add_money(1)
 	print("Coin play()")
 	sprite.set_global_position(position)
 	audio.play()
@@ -17,4 +16,5 @@ func play(position):
 	tween.interpolate_property(sprite, "position", sprite.position, Vector2(288, 8), 0.5, Tween.EASE_IN, Tween.TRANS_LINEAR)
 	tween.start()
 	yield(tween, "tween_completed")
+	PlayerStats.add_money(1)
 	queue_free()

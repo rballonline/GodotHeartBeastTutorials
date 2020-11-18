@@ -594,8 +594,10 @@ position = Vector2( -16, 40 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HeathUI" parent="CanvasLayer" instance=ExtResource( 9 )]
-margin_right = 83.0
-margin_bottom = 18.0
+margin_left = 2.20541
+margin_top = 2.11893
+margin_right = 85.2054
+margin_bottom = 20.1189
 
 [node name="Menu" parent="CanvasLayer" instance=ExtResource( 12 )]
 visible = false
