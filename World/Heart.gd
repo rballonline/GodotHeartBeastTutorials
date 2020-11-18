@@ -4,7 +4,7 @@ onready var tween = $Tween
 onready var sprite = $AnimatedSprite
 onready var audio = $AudioStreamPlayer
 
-func play():
+func play(global_position):
 	print("Heart play()")
 	PlayerStats.add_health(1)
 	audio.play()

@@ -1,16 +1,11 @@
-extends AnimatedSprite
+extends "res://Effects/Effect.gd"
 
+var Coin = preload("res://World/Coin.tscn")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func reveal():
+	var number = rand_range(1, 3)
+	print(str(number))
+	if number <= 2:
+		var coin = Coin.instance()
+		get_parent().add_child(coin)
+		coin.play(position + Vector2(8, 8), get_global_transform_with_canvas().get_origin() + Vector2(8, 8))
