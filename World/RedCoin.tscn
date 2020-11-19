@@ -4,9 +4,3 @@
 
 [node name="RedCoin" instance=ExtResource( 1 )]
 amount = 5
-
-[node name="CoinCollection" parent="CanvasLayer" index="0"]
-frame = 4
-
-[node name="CoinAnchor" parent="." index="3"]
-frame = 3
